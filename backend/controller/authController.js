@@ -87,11 +87,15 @@ const authController = {
     res.cookie("accessToken", accessToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      sameSite:"None",
+      secure:true,
     });
 
     res.cookie("refreshToken", refreshToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      sameSite:"None",
+      secure:true,
     });
 
     // 6. response send
@@ -174,11 +178,15 @@ const authController = {
     res.cookie("accessToken", accessToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      sameSite:"None",
+      secure:true,
     });
 
     res.cookie("refreshToken", refreshToken, {
       maxAge: 1000 * 60 * 60 * 24,
       httpOnly: true,
+      sameSite:"None",
+      secure:true,
     });
 
     const userDto = new UserDTO(user);
@@ -251,11 +259,15 @@ const authController = {
       res.cookie("accessToken", accessToken, {
         maxAge: 1000 * 60 * 60 * 24,
         httpOnly: true,
+        sameSite:"None",
+      secure:true,
       });
 
       res.cookie("refreshToken", refreshToken, {
         maxAge: 1000 * 60 * 60 * 24,
         httpOnly: true,
+        sameSite:"None",
+      secure:true,
       });
     } catch (e) {
       return next(e);
